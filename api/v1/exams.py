@@ -4,7 +4,7 @@ from fastapi import APIRouter
 
 from schemas.exams import ExamGet
 
-api_router = APIRouter(prefix="/exams")
+router = APIRouter(prefix="/exams")
 
 exams: dict[int, ExamGet] = {
     1: ExamGet(
@@ -18,6 +18,6 @@ exams: dict[int, ExamGet] = {
 }
 
 
-@api_router.get("/", response_model=list[ExamGet])
+@router.get("/", response_model=list[ExamGet])
 def get_exams():
     return list(exams.values())

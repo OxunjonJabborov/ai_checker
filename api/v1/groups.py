@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 from schemas.groups import GroupGet
 
-api_router = APIRouter(prefix="/groups")
+router = APIRouter(prefix="/groups")
 
 groups: dict[int, GroupGet] = {
     1: GroupGet(id=1, group_id=1, name="Group 1", count_students=30),
@@ -11,6 +11,6 @@ groups: dict[int, GroupGet] = {
 }
 
 
-@api_router.get("/", response_model=list[GroupGet])
+@router.get("/", response_model=list[GroupGet])
 def get_groups():
     return list(groups.values())

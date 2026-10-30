@@ -2,7 +2,7 @@ from fastapi import APIRouter
 
 from schemas.submissions import SubmissionGet
 
-api_router = APIRouter(prefix="/submissions")
+router = APIRouter(prefix="/submissions")
 
 
 submissions: dict[int, SubmissionGet] = {
@@ -11,6 +11,6 @@ submissions: dict[int, SubmissionGet] = {
 }
 
 
-@api_router.get("/", response_model=list[SubmissionGet])
+@router.get("/", response_model=list[SubmissionGet])
 def get_submissions():
     return list(submissions.values())
