@@ -1,16 +1,11 @@
 from fastapi import APIRouter
 
+import fake_db
 from schemas.submissions import SubmissionGet
 
 router = APIRouter(prefix="/submissions")
 
 
-submissions: dict[int, SubmissionGet] = {
-    1: SubmissionGet(id=1, submission_id=1, deadline="2026-03-16T21:00:00", grade=4.5),
-    2: SubmissionGet(id=2, submission_id=2, deadline="2026-03-17T21:00:00", grade=3.0)
-}
-
-
 @router.get("/", response_model=list[SubmissionGet])
 def get_submissions():
-    return list(submissions.values())
+    return list(fake_db.submissions.values())
