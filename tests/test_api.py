@@ -46,7 +46,7 @@ def test_get_students():
         },
         {
             "id": 2,
-            "full_name": "Rahmonaliyev Izzatbek ",
+            "full_name": "Rahmonaliyev Izzatbek",
             "age": 20,
             "phone_number": "+998770000000",
             "email": "rahmonaliyev@example.com",
