@@ -6,7 +6,7 @@ client = TestClient(app)
 
 
 def test_get_exams():
-    response = client.get("/exams/")
+    response = client.get("/api/v1/exams/")
 
     assert response.status_code == 200
     assert response.json() == [
@@ -22,7 +22,7 @@ def test_get_exams():
 
 
 def test_get_groups():
-    response = client.get("/groups/")
+    response = client.get("/api/v1/groups/")
 
     assert response.status_code == 200
     assert response.json() == [
@@ -33,7 +33,7 @@ def test_get_groups():
 
 
 def test_get_students():
-    response = client.get("/students/")
+    response = client.get("/api/v1/students/")
 
     assert response.status_code == 200
     assert response.json() == [
@@ -55,7 +55,7 @@ def test_get_students():
 
 
 def test_get_submissions():
-    response = client.get("/submissions/")
+    response = client.get("/api/v1/submissions/")
 
     assert response.status_code == 200
     assert response.json() == [
@@ -65,7 +65,7 @@ def test_get_submissions():
 
 
 def test_get_teachers():
-    response = client.get("/teachers/")
+    response = client.get("/api/v1/teachers/")
 
     assert response.status_code == 200
     assert response.json() == [
