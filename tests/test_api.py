@@ -26,9 +26,9 @@ def test_get_groups():
 
     assert response.status_code == 200
     assert response.json() == [
-        {"id": 1, "group_id": 1, "name": "Group 1", "count_students": 30},
-        {"id": 2, "group_id": 2, "name": "Group 2", "count_students": 25},
-        {"id": 3, "group_id": 3, "name": "Group 3", "count_students": 20},
+        {"id": 1, "name": "Group 1", "count_students": 30},
+        {"id": 2, "name": "Group 2", "count_students": 25},
+        {"id": 3, "name": "Group 3", "count_students": 20},
     ]
 
 
@@ -39,7 +39,6 @@ def test_get_students():
     assert response.json() == [
         {
             "id": 1,
-            "student_id": 1,
             "full_name": "Abdusalimova Sarvinoz",
             "age": 18,
             "phone_number": "+998777777777",
@@ -47,7 +46,6 @@ def test_get_students():
         },
         {
             "id": 2,
-            "student_id": 2,
             "full_name": "Rahmonaliyev Izzatbek ",
             "age": 20,
             "phone_number": "+998770000000",
@@ -61,8 +59,8 @@ def test_get_submissions():
 
     assert response.status_code == 200
     assert response.json() == [
-        {"id": 1, "submission_id": 1, "deadline": "2026-03-16T21:00:00", "grade": 4.5},
-        {"id": 2, "submission_id": 2, "deadline": "2026-03-17T21:00:00", "grade": 3.0},
+        {"id": 1, "deadline": "2026-03-16T21:00:00", "grade": 4.5},
+        {"id": 2, "deadline": "2026-03-17T21:00:00", "grade": 3.0},
     ]
 
 
@@ -73,7 +71,6 @@ def test_get_teachers():
     assert response.json() == [
         {
             "id": 1,
-            "teacher_id": 1,
             "full_name": "Abdullayev Askar",
             "phone_number": "+998911111111",
             "email": "abdullayevaskar@example.com",

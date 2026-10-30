@@ -35,13 +35,12 @@ def test_exam_rejects_duration_longer_than_window():
 
 def test_submission_rejects_invalid_deadline():
     with pytest.raises(ValidationError):
-        SubmissionCreate(submission_id=1, deadline="tomorrow", grade=4)
+        SubmissionCreate(deadline="tomorrow", grade=4)
 
 
 def test_student_rejects_invalid_email():
     with pytest.raises(ValidationError):
         StudentCreate(
-            student_id=1,
             full_name="Test Student",
             age=18,
             phone_number="+998900000000",
