@@ -1,2 +1,2 @@
 # ai_checker
-System that cheks exams and homeworks using AI
+System that checks exams and homeworks using AI

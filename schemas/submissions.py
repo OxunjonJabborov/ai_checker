@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 
+
 class SubmissionBase(BaseModel):
     submission_id: int = Field(description="The ID of the submission")
     deadline: str = Field(description="The end time of the submission")
@@ -7,7 +8,7 @@ class SubmissionBase(BaseModel):
 
 
 class SubmissionGet(SubmissionBase):
-    id: int = Field()
+    id: int
 
 
 class SubmissionCreate(SubmissionBase):

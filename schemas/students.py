@@ -10,9 +10,8 @@ class StudentBase(BaseModel):
 
 
 class StudentGet(StudentBase):
-    id: int = Field()
+    id: int
 
 
 class StudentCreate(StudentBase):
     pass
-

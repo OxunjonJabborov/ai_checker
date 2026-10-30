@@ -1,5 +1,6 @@
-from pydantic import BaseModel, Field
 from datetime import datetime
+
+from pydantic import BaseModel, Field
 
 
 class ExamBase(BaseModel):
@@ -11,11 +12,8 @@ class ExamBase(BaseModel):
 
 
 class ExamGet(ExamBase):
-    id: int = Field()
+    id: int
 
 
 class ExamCreate(ExamBase):
     pass
-
-
-

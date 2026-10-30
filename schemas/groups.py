@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 
+
 class GroupBase(BaseModel):
     group_id: int = Field(description="The ID of the group")
     name: str = Field(description="The name of the group")
@@ -7,7 +8,7 @@ class GroupBase(BaseModel):
 
 
 class GroupGet(GroupBase):
-    id: int = Field()
+    id: int
 
 
 class GroupCreate(GroupBase):

@@ -9,6 +9,7 @@ students: dict[int, StudentGet] = {
     2: StudentGet(id=2, student_id=2, full_name="Rahmonaliyev Izzatbek ", age=20, phone_number='+998770000000', email="rahmonaliyev@example.com")
 }
 
+
 @api_router.get("/", response_model=list[StudentGet])
 def get_students():
     return list(students.values())
